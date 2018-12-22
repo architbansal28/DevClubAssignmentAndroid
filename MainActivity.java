@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView countTextView;
     Button increaseButton;
+    Button resetButton;
     int count;
 
     @Override
@@ -19,11 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
         countTextView = findViewById(R.id.textView1);
         increaseButton = findViewById(R.id.button1);
+        resetButton = findViewById(R.id.button2);
         count = 0;
     }
 
     public void increase(View view){
         count++;
+        countTextView.setText("COUNT: "+count);
+
+    }
+
+    public void reset(View view){
+        count = 0;
         countTextView.setText("COUNT: "+count);
 
     }
